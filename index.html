@@ -16,39 +16,7 @@
     .referral-section p {
       color: #455a64;
       font-size: 1.1em;
-      margin-bottom: 20px;
-    }
-
-    #timer-container {
-      font-size: 1.2em;
-      color: #00796b;
-      font-weight: bold;
       margin-bottom: 30px;
-    }
-
-    .ref-filter {
-      margin-bottom: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .ref-filter button {
-      background: #fff;
-      border: 1px solid #00796b;
-      color: #00796b;
-      padding: 8px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: bold;
-    }
-
-    .ref-filter button.active,
-    .ref-filter button:hover {
-      background: #00796b;
-      color: white;
     }
 
     .referral-buttons {
@@ -64,16 +32,12 @@
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.6s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .ref-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .ref-title {
@@ -105,10 +69,6 @@
       background-color: #004d40;
     }
 
-    .hidden {
-      display: none !important;
-    }
-
     @media (max-width: 480px) {
       .referral-section h2 {
         font-size: 1.6em;
@@ -131,110 +91,115 @@
   <h2>🎁 Рекомендуй и зарабатывай</h2>
   <p>Лови топовые предложения — бонусы, кэшбэк и подарки за оформление по моим ссылкам!</p>
 
-  <div id="timer-container">
-    Осталось: <span id="ref-timer">7д 00:00:00</span>
-  </div>
-
-  <div class="ref-filter">
-    <button class="active" data-cat="all">Все</button>
-    <button data-cat="bank">💳 Банки</button>
-    <button data-cat="mobile">📱 Мобайл</button>
-    <button data-cat="job">👔 Работа</button>
-    <button data-cat="biz">🏢 Бизнес</button>
-    <button data-cat="insure">🛡 Страхование</button>
-    <button data-cat="crypto">🪙 Крипта</button>
-    <button data-cat="deliv">🚗 Доставка</button>
-  </div>
-
   <div class="referral-buttons">
-    <!-- Пример карточки -->
-    <div class="ref-block" data-cat="deliv">
+    <!-- ВСТАВЛЯЮ ВСЕ РЕФЕРАЛКИ -->
+    <div class="ref-block">
       <p class="ref-title">🚗 Яндекс Доставка</p>
       <p class="ref-desc">Код <strong>19БЫК172</strong> — подключайся через Яндекс Про и зарабатывай с нами!</p>
       <a href="https://ya.cc/6a78dp" target="_blank" class="ref-btn">👉 Скачать Яндекс Про</a>
     </div>
 
-    <div class="ref-block" data-cat="bank">
+    <div class="ref-block">
       <p class="ref-title">💳 Tinkoff Black</p>
       <p class="ref-desc">Оформи карту по ссылке и получи 500₽ бонуса</p>
       <a href="https://www.tbank.ru/baf/95WeAzPonzu" target="_blank" class="ref-btn">👉 Получить карту</a>
     </div>
 
-    <div class="ref-block" data-cat="job">
+    <div class="ref-block">
       <p class="ref-title">👔 Работа в Тинькофф</p>
       <p class="ref-desc">До 5000₽ за рекомендацию!</p>
       <a href="https://www.tbank.ru/baf/9aTxF8fjnCK" target="_blank" class="ref-btn">👉 Подробнее</a>
     </div>
 
-    <div class="ref-block" data-cat="mobile">
+    <div class="ref-block">
       <p class="ref-title">📱 Тинькофф Мобайл</p>
       <p class="ref-desc">3 мес тарифа «Про» + 500 бонусов</p>
       <a href="https://www.tbank.ru/baf/9OSldn7z9gr" target="_blank" class="ref-btn">👉 Подключиться</a>
     </div>
 
-    <div class="ref-block" data-cat="biz">
+    <div class="ref-block">
       <p class="ref-title">🏢 Бизнес-счёт Тинькофф</p>
       <p class="ref-desc">3 месяца бесплатного обслуживания</p>
       <a href="https://www.tbank.ru/baf/12WlKxbhikL" target="_blank" class="ref-btn">👉 Открыть счёт</a>
     </div>
 
-    <div class="ref-block" data-cat="insure">
+    <div class="ref-block">
       <p class="ref-title">🚘 КАСКО от Тинькофф</p>
       <p class="ref-desc">Оформи полис — скидка 10%</p>
       <a href="https://www.tbank.ru/baf/5y8dYuP8EJW" target="_blank" class="ref-btn">👉 Рассчитать КАСКО</a>
     </div>
 
-    <div class="ref-block" data-cat="crypto">
+    <div class="ref-block">
+      <p class="ref-title">📲 Приложение Т-Банк</p>
+      <p class="ref-desc">Финансы и быт — удобно!</p>
+      <a href="https://www.tbank.ru/baf/AXcSwT5Bfzh" target="_blank" class="ref-btn">👉 Скачать</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">💛 Love is карта</p>
+      <p class="ref-desc">Дизайн + бонус за оформление</p>
+      <a href="https://www.tbank.ru/baf/75N44CBAE8u" target="_blank" class="ref-btn">👉 Получить карту</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">🏨 Отели через Тинькофф</p>
+      <p class="ref-desc">Кэшбэк до 10%</p>
+      <a href="https://www.tbank.ru/baf/7Ukbg1021H8" target="_blank" class="ref-btn">👉 Забронировать</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">💰 Вклад в Т-Банке</p>
+      <p class="ref-desc">+0.25% по вкладу</p>
+      <a href="https://www.tbank.ru/baf/dOZgJJTP7l" target="_blank" class="ref-btn">👉 Открыть вклад</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">❤️ Альфа-Банк карта</p>
+      <p class="ref-desc">Бонус за оформление</p>
+      <a href="https://alfa.me/RAhfgM" target="_blank" class="ref-btn">👉 Получить карту</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">🏢 Альфа-Банк для бизнеса</p>
+      <p class="ref-desc">3000 бонусов + эквайринг от 1%</p>
+      <a href="https://alfa.me/aiNr_Z" target="_blank" class="ref-btn">👉 Открыть счёт</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">🧾 Регистрация ООО/ИП</p>
+      <p class="ref-desc">2000 баллов бонусом</p>
+      <a href="https://alfa.me/4KUsX_" target="_blank" class="ref-btn">👉 Зарегистрировать бизнес</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">🎟 Альфа-Стикер</p>
+      <p class="ref-desc">Кэшбэк при оплатах</p>
+      <a href="https://alfa.me/fdHshp" target="_blank" class="ref-btn">👉 Получить Стикер</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">💳 Кредит Совкомбанк</p>
+      <p class="ref-desc">До 1000 бонусов</p>
+      <a href="https://hva.im/Y9PySN" target="_blank" class="ref-btn">👉 Подать заявку</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">🛍 Карта Халва</p>
+      <p class="ref-desc">1000 баллов кэшбэка</p>
+      <a href="https://hva.im/baRYRG" target="_blank" class="ref-btn">👉 Оформить карту</a>
+    </div>
+
+    <div class="ref-block">
+      <p class="ref-title">🏦 Карта от ОТП</p>
+      <p class="ref-desc">Бонус при оформлении</p>
+      <a href="https://r.otpbank.ru/cc/mxh4dx" target="_blank" class="ref-btn">👉 Первая заявка</a>
+      <a href="https://r.otpbank.ru/cc/4eys53" target="_blank" class="ref-btn">👉 Вторая заявка</a>
+    </div>
+
+    <div class="ref-block">
       <p class="ref-title">🪙 Криптобиржа ByBit</p>
       <p class="ref-desc">Бонусы за регистрацию и торговлю</p>
       <a href="https://www.bybit.com/invite?ref=OJ407B" target="_blank" class="ref-btn">👉 Перейти на ByBit</a>
     </div>
-    <!-- Добавь остальные карточки по образцу выше -->
   </div>
-
-  <script>
-    // Таймер на 7 дней
-    const startTime = localStorage.getItem('refStartTime');
-    let deadline;
-    if (startTime) {
-      deadline = new Date(parseInt(startTime));
-    } else {
-      deadline = new Date();
-      localStorage.setItem('refStartTime', deadline.getTime());
-    }
-    deadline.setDate(deadline.getDate() + 7);
-    function updateTimer() {
-      const now = new Date();
-      const diff = deadline - now;
-      if (diff <= 0) {
-        document.getElementById('ref-timer').innerText = "Акция завершена";
-        return;
-      }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-      document.getElementById('ref-timer').innerText =
-        `${days}д ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-    }
-    setInterval(updateTimer, 1000);
-    updateTimer();
-
-    // Фильтрация
-    const buttons = document.querySelectorAll('.ref-filter button');
-    const blocks = document.querySelectorAll('.ref-block');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.dataset.cat;
-        blocks.forEach(block => {
-          block.classList.add('hidden');
-          if (cat === 'all' || block.dataset.cat === cat) {
-            block.classList.remove('hidden');
-          }
-        });
-      });
-    });
-  </script>
 </section>
