@@ -1,48 +1,45 @@
 .referral-section {
-  padding: 4rem 2rem;
-  background-color: #f8fcff;
+  background: #f5fcff;
+  padding: 3rem 1rem;
+  border-top: 4px solid #00aaff;
   text-align: center;
 }
 
 .referral-section h2 {
-  color: #035d7d;
   font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.referral-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.referral-cards .card {
-  background-color: #ffffff;
-  border: 2px solid #d4e8f0;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.referral-cards .card:hover {
-  transform: scale(1.03);
-}
-
-.referral-cards .card h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  color: #02496a;
+  color: #0077aa;
 }
 
-.referral-cards .card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+.referral-section p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #444;
 }
 
-.referral-cards .card a {
-  color: #0077cc;
+.referral-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ref-btn {
+  display: inline-block;
+  background-color: #00aaff;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+}
+
+.ref-btn:hover {
+  background-color: #0088cc;
+  transform: translateY(-2px);
 }
