@@ -1,45 +1,65 @@
 .referral-section {
-  background: #f5fcff;
+  background: #f7fbff;
   padding: 3rem 1rem;
-  border-top: 4px solid #00aaff;
   text-align: center;
 }
 
 .referral-section h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #0077aa;
+  color: #005b85;
 }
 
 .referral-section p {
   font-size: 1rem;
   margin-bottom: 2rem;
-  color: #444;
+  color: #333;
 }
 
 .referral-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  max-width: 800px;
+  gap: 20px;
+  max-width: 900px;
   margin: 0 auto;
+}
+
+.ref-block {
+  background: #fff;
+  border: 1px solid #ddeeff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.ref-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #006699;
+  margin-bottom: 6px;
+}
+
+.ref-desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 12px;
 }
 
 .ref-btn {
   display: inline-block;
   background-color: #00aaff;
   color: #fff;
-  padding: 12px 20px;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
+  font-weight: bold;
   transition: 0.3s ease;
-  width: 100%;
-  max-width: 500px;
 }
 
 .ref-btn:hover {
   background-color: #0088cc;
-  transform: translateY(-2px);
 }
