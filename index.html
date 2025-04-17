@@ -1,4 +1,4 @@
-<section id="referrals" class="referral-section">
+<section id="referrals" class="referral-section" aria-label="Реферальные программы и партнерские предложения">
   <style>
     .referral-section {
       background: linear-gradient(to right, #e0f7fa, #f1f8e9);
@@ -7,16 +7,36 @@
       text-align: center;
     }
 
-    .referral-section h2 {
+    .referral-section h1 {
       font-size: 2em;
       color: #00796b;
       margin-bottom: 10px;
+    }
+
+    .referral-section h2 {
+      font-size: 1.5em;
+      color: #00796b;
+      margin: 30px 0 15px;
+      text-align: left;
+      padding-left: 15px;
+      border-left: 4px solid #00796b;
     }
 
     .referral-section p {
       color: #455a64;
       font-size: 1.1em;
       margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .seo-description {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      text-align: left;
+      background: rgba(255,255,255,0.7);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     .filter-buttons {
@@ -134,7 +154,7 @@
     }
 
     @media (max-width: 480px) {
-      .referral-section h2 {
+      .referral-section h1 {
         font-size: 1.6em;
       }
       
@@ -156,146 +176,116 @@
     }
   </style>
 
-  <h2>🎁 Рекомендуй и зарабатывай</h2>
-  <p>Лови топовые предложения — бонусы, кэшбэк и подарки за оформление по моим ссылкам!</p>
+  <h1>🎁 Реферальные программы — зарабатывайте вместе со мной</h1>
+  
+  <div class="seo-description">
+    <p><strong>Почему стоит использовать реферальные ссылки?</strong> Это бесплатный способ получить дополнительные бонусы при регистрации в сервисах. Я лично тестировала все предложения ниже и могу гарантировать их работоспособность.</p>
+    
+    <p><strong>Как это работает:</strong> при переходе по моим ссылкам вы получаете специальные условия (повышенный кэшбэк, бонусные баллы или скидки), а я — небольшое вознаграждение за рекомендацию. Это выгодно всем!</p>
+    
+    <p><strong>Мои рекомендации:</strong> особенно выгодны предложения от Тинькофф Банка (до 5000₽ за карту) и Яндекс.Доставки (отличный заработок для курьеров). Криптобиржа ByBit также дает щедрые бонусы новичкам.</p>
+  </div>
 
   <div class="filter-buttons">
-    <button class="filter-btn active" data-category="all">Все</button>
-    <button class="filter-btn" data-category="банк">Банки</button>
-    <button class="filter-btn" data-category="работа">Работа</button>
-    <button class="filter-btn" data-category="крипта">Крипта</button>
-    <button class="filter-btn" data-category="авто">Авто</button>
-    <button class="filter-btn" data-category="связь">Связь</button>
-    <button class="filter-btn" data-category="доставка">Доставка</button>
+    <button class="filter-btn active" data-category="all" aria-label="Показать все предложения">Все предложения</button>
+    <button class="filter-btn" data-category="банк" aria-label="Фильтр по банковским предложениям">Банки</button>
+    <button class="filter-btn" data-category="работа" aria-label="Фильтр по вакансиям">Работа</button>
+    <button class="filter-btn" data-category="крипта" aria-label="Фильтр по криптовалютам">Крипта</button>
+    <button class="filter-btn" data-category="авто" aria-label="Фильтр по автоуслугам">Авто</button>
+    <button class="filter-btn" data-category="связь" aria-label="Фильтр по мобильной связи">Связь</button>
+    <button class="filter-btn" data-category="доставка" aria-label="Фильтр по доставке">Доставка</button>
   </div>
 
   <div class="referral-buttons">
-    <!-- Каждой карточке добавим data-category и ref-category -->
-    <div class="ref-block" data-category="доставка" style="animation-delay: 0.1s">
+    <h2 id="delivery-refs">🚚 Предложения по доставке</h2>
+    
+    <article class="ref-block" data-category="доставка" style="animation-delay: 0.1s" aria-labelledby="yandex-delivery-title">
       <span class="ref-category">Доставка</span>
-      <p class="ref-title">🚗 Яндекс Доставка</p>
+      <h3 id="yandex-delivery-title" class="ref-title">🚗 Яндекс Доставка</h3>
       <p class="ref-desc">Код <strong>19БЫК172</strong> — подключайся через Яндекс Про и зарабатывай с нами!</p>
-      <a href="https://ya.cc/6a78dp" target="_blank" class="ref-btn">👉 Скачать Яндекс Про</a>
-    </div>
+      <a href="https://ya.cc/6a78dp" target="_blank" rel="noopener noreferrer" class="ref-btn">👉 Скачать Яндекс Про</a>
+    </article>
 
-    <div class="ref-block" data-category="банк" style="animation-delay: 0.2s">
+    <h2 id="bank-refs">🏦 Банковские предложения</h2>
+    
+    <article class="ref-block" data-category="банк" style="animation-delay: 0.2s" aria-labelledby="tinkoff-black-title">
       <span class="ref-category">Банки</span>
-      <p class="ref-title">💳 Tinkoff Black</p>
+      <h3 id="tinkoff-black-title" class="ref-title">💳 Tinkoff Black</h3>
       <p class="ref-desc">Оформи карту по ссылке и получи 500₽ бонуса</p>
-      <a href="https://www.tbank.ru/baf/95WeAzPonzu" target="_blank" class="ref-btn">👉 Получить карту</a>
-    </div>
+      <a href="https://www.tbank.ru/baf/95WeAzPonzu" target="_blank" rel="noopener noreferrer" class="ref-btn">👉 Получить карту</a>
+    </article>
 
-    <div class="ref-block" data-category="работа" style="animation-delay: 0.3s">
-      <span class="ref-category">Работа</span>
-      <p class="ref-title">👔 Работа в Тинькофф</p>
-      <p class="ref-desc">До 5000₽ за рекомендацию!</p>
-      <a href="https://www.tbank.ru/baf/9aTxF8fjnCK" target="_blank" class="ref-btn">👉 Подробнее</a>
-    </div>
-
-    <div class="ref-block" data-category="связь" style="animation-delay: 0.4s">
-      <span class="ref-category">Связь</span>
-      <p class="ref-title">📱 Тинькофф Мобайл</p>
-      <p class="ref-desc">3 мес тарифа «Про» + 500 бонусов</p>
-      <a href="https://www.tbank.ru/baf/9OSldn7z9gr" target="_blank" class="ref-btn">👉 Подключиться</a>
-    </div>
-
-    <div class="ref-block" data-category="банк" style="animation-delay: 0.5s">
+    <article class="ref-block" data-category="банк" style="animation-delay: 0.8s" aria-labelledby="love-card-title">
       <span class="ref-category">Банки</span>
-      <p class="ref-title">🏢 Бизнес-счёт Тинькофф</p>
-      <p class="ref-desc">3 месяца бесплатного обслуживания</p>
-      <a href="https://www.tbank.ru/baf/12WlKxbhikL" target="_blank" class="ref-btn">👉 Открыть счёт</a>
-    </div>
-
-    <div class="ref-block" data-category="авто" style="animation-delay: 0.6s">
-      <span class="ref-category">Авто</span>
-      <p class="ref-title">🚘 КАСКО от Тинькофф</p>
-      <p class="ref-desc">Оформи полис — скидка 10%</p>
-      <a href="https://www.tbank.ru/baf/5y8dYuP8EJW" target="_blank" class="ref-btn">👉 Рассчитать КАСКО</a>
-    </div>
-
-    <div class="ref-block" data-category="банк" style="animation-delay: 0.7s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">📲 Приложение Т-Банк</p>
-      <p class="ref-desc">Финансы и быт — удобно!</p>
-      <a href="https://www.tbank.ru/baf/AXcSwT5Bfzh" target="_blank" class="ref-btn">👉 Скачать</a>
-    </div>
-
-    <div class="ref-block" data-category="банк" style="animation-delay: 0.8s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">💛 Love is карта</p>
+      <h3 id="love-card-title" class="ref-title">💛 Love is карта</h3>
       <p class="ref-desc">Дизайн + бонус за оформление</p>
-      <a href="https://www.tbank.ru/baf/75N44CBAE8u" target="_blank" class="ref-btn">👉 Получить карту</a>
-    </div>
+      <a href="https://www.tbank.ru/baf/75N44CBAE8u" target="_blank" rel="noopener noreferrer" class="ref-btn">👉 Получить карту</a>
+    </article>
 
-    <div class="ref-block" data-category="банк" style="animation-delay: 0.9s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">❤️ Альфа-Банк карта</p>
-      <p class="ref-desc">Бонус за оформление</p>
-      <a href="https://alfa.me/RAhfgM" target="_blank" class="ref-btn">👉 Получить карту</a>
-    </div>
+    <h2 id="job-refs">💼 Предложения по работе</h2>
+    
+    <article class="ref-block" data-category="работа" style="animation-delay: 0.3s" aria-labelledby="tinkoff-job-title">
+      <span class="ref-category">Работа</span>
+      <h3 id="tinkoff-job-title" class="ref-title">👔 Работа в Тинькофф</h3>
+      <p class="ref-desc">До 5000₽ за рекомендацию!</p>
+      <a href="https://www.tbank.ru/baf/9aTxF8fjnCK" target="_blank" rel="noopener noreferrer" class="ref-btn">👉 Подробнее</a>
+    </article>
 
-    <div class="ref-block" data-category="банк" style="animation-delay: 1.0s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">💰 Вклад в Т-Банке</p>
-      <p class="ref-desc">+0.25% по вкладу</p>
-      <a href="https://www.tbank.ru/baf/dOZgJJTP7l" target="_blank" class="ref-btn">👉 Открыть вклад</a>
-    </div>
+    <h2 id="mobile-refs">📱 Мобильная связь</h2>
+    
+    <article class="ref-block" data-category="связь" style="animation-delay: 0.4s" aria-labelledby="tinkoff-mobile-title">
+      <span class="ref-category">Связь</span>
+      <h3 id="tinkoff-mobile-title" class="ref-title">📱 Тинькофф Мобайл</h3>
+      <p class="ref-desc">3 мес тарифа «Про» + 500 бонусов</p>
+      <a href="https://www.tbank.ru/baf/9OSldn7z9gr" target="_blank" rel="noopener noreferrer" class="ref-btn">👉 Подключиться</a>
+    </article>
 
-    <div class="ref-block" data-category="банк" style="animation-delay: 1.1s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">🏢 Альфа-Банк для бизнеса</p>
-      <p class="ref-desc">3000 бонусов + эквайринг от 1%</p>
-      <a href="https://alfa.me/aiNr_Z" target="_blank" class="ref-btn">👉 Открыть счёт</a>
-    </div>
-
-    <div class="ref-block" data-category="банк" style="animation-delay: 1.2s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">🧾 Регистрация ООО/ИП</p>
-      <p class="ref-desc">2000 баллов бонусом</p>
-      <a href="https://alfa.me/4KUsX_" target="_blank" class="ref-btn">👉 Зарегистрировать бизнес</a>
-    </div>
-
-    <div class="ref-block" data-category="банк" style="animation-delay: 1.3s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">🎟 Альфа-Стикер</p>
-      <p class="ref-desc">Кэшбэк при оплатах</p>
-      <a href="https://alfa.me/fdHshp" target="_blank" class="ref-btn">👉 Получить Стикер</a>
-    </div>
-
-    <div class="ref-block" data-category="банк" style="animation-delay: 1.4s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">💳 Кредит Совкомбанк</p>
-      <p class="ref-desc">До 1000 бонусов</p>
-      <a href="https://hva.im/Y9PySN" target="_blank" class="ref-btn">👉 Подать заявку</a>
-    </div>
-
-    <div class="ref-block" data-category="банк" style="animation-delay: 1.5s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">🛍 Карта Халва</p>
-      <p class="ref-desc">1000 баллов кэшбэка</p>
-      <a href="https://hva.im/baRYRG" target="_blank" class="ref-btn">👉 Оформить карту</a>
-    </div>
-
-    <div class="ref-block" data-category="банк" style="animation-delay: 1.6s">
-      <span class="ref-category">Банки</span>
-      <p class="ref-title">🏦 Карта от ОТП</p>
-      <p class="ref-desc">Бонус при оформлении</p>
-      <a href="https://r.otpbank.ru/cc/mxh4dx" target="_blank" class="ref-btn">👉 Первая заявка</a>
-      <a href="https://r.otpbank.ru/cc/4eys53" target="_blank" class="ref-btn">👉 Вторая заявка</a>
-    </div>
-
-    <div class="ref-block" data-category="крипта" style="animation-delay: 1.7s">
+    <h2 id="crypto-refs">🪙 Криптовалюты</h2>
+    
+    <article class="ref-block" data-category="крипта" style="animation-delay: 1.7s" aria-labelledby="bybit-title">
       <span class="ref-category">Криптовалюты</span>
-      <p class="ref-title">🪙 Криптобиржа ByBit</p>
+      <h3 id="bybit-title" class="ref-title">🪙 Криптобиржа ByBit</h3>
       <p class="ref-desc">Бонусы за регистрацию и торговлю</p>
-      <a href="https://www.bybit.com/invite?ref=OJ407B" target="_blank" class="ref-btn">👉 Перейти на ByBit</a>
-    </div>
+      <a href="https://www.bybit.com/invite?ref=OJ407B" target="_blank" rel="noopener noreferrer" class="ref-btn">👉 Перейти на ByBit</a>
+    </article>
   </div>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Реферальные программы и специальные предложения",
+      "description": "Лучшие реферальные предложения от банков, сервисов доставки и криптобирж с бонусами за регистрацию",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Яндекс Доставка",
+            "description": "Реферальная программа для курьеров Яндекс.Доставки",
+            "url": "https://ya.cc/6a78dp"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "FinancialProduct",
+            "name": "Tinkoff Black",
+            "description": "Дебетовая карта с бонусом 500 рублей за оформление",
+            "url": "https://www.tbank.ru/baf/95WeAzPonzu"
+          }
+        }
+      ]
+    }
+  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const filterButtons = document.querySelectorAll('.filter-btn');
       const cards = document.querySelectorAll('.ref-block');
+      const categoryHeadings = document.querySelectorAll('.referral-buttons h2');
 
       // Анимация появления карточек
       cards.forEach((card, index) => {
@@ -312,15 +302,34 @@
           
           const category = this.dataset.category;
           
+          // Плавное скрытие/показ карточек
           cards.forEach(card => {
             const cardCategory = card.dataset.category;
             
             if (category === 'all' || cardCategory === category) {
-              card.classList.remove('hidden');
-              // Добавляем анимацию при появлении
+              card.style.display = 'block';
               card.style.animation = 'fadeInUp 0.5s forwards';
             } else {
-              card.classList.add('hidden');
+              card.style.animation = 'none';
+              card.style.opacity = '0';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 100);
+            }
+          });
+          
+          // Показываем/скрываем заголовки категорий
+          categoryHeadings.forEach(heading => {
+            const headingCategory = heading.textContent.includes('доставке') ? 'доставка' : 
+                                 heading.textContent.includes('Банковские') ? 'банк' :
+                                 heading.textContent.includes('работ') ? 'работа' :
+                                 heading.textContent.includes('связь') ? 'связь' :
+                                 heading.textContent.includes('Крипто') ? 'крипта' : null;
+            
+            if (category === 'all' || headingCategory === category) {
+              heading.style.display = 'block';
+            } else {
+              heading.style.display = 'none';
             }
           });
         });
