@@ -127,76 +127,37 @@
             gap: 25px;
         }
 
-        .ref-block {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s forwards;
-        }
+      .ref-block {
+    position: relative;
+    padding-top: 40px; /* Добавляем место для бейджа сверху */
+}
 
-        @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
+.recommended-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px; /* Переносим в левый верхний угол */
+    background: linear-gradient(135deg, #e53935, #d81b60);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+    z-index: 2;
+}
 
-        .ref-block:hover {
-            transform: translateY(-5px) !important;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .recommended-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: linear-gradient(135deg, #e64a19, #f57c00); /* Увеличена контрастность */
-            color: white;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.75em;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .ref-category {
-            display: inline-block;
-            background: #80cbc4; /* Увеличена контрастность */
-            color: #004d40; /* Увеличена контрастность */
-            padding: 5px 12px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .ref-title {
-            font-size: 1.25em;
-            color: #00695c; /* Увеличена контрастность */
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .ref-desc {
-            font-size: 1em;
-            color: #263238; /* Увеличена контрастность */
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-       .ref-bonus {
+.ref-bonus {
     display: inline-block;
-    background: #fff3e0; /* Светло-оранжевый фон */
-    color: #bf360c; /* Темно-оранжевый текст (контраст 7:1) */
+    background: #fff3e0;
+    color: #bf360c;
     padding: 4px 10px;
     border-radius: 6px;
     font-size: 0.85em;
-    font-weight: 700; /* Полужирный для лучшей читаемости */
-    margin-bottom: 12px;
-    border: 1px solid #ffa000; /* Оранжевая граница */
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Легкая тень для объема */
+    font-weight: 700;
+    margin: 5px 0 15px 0; /* Улучшаем отступы */
+    border: 1px solid #ffa000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
 }
         .ref-btn {
             display: inline-block;
